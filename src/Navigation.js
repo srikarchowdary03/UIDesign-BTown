@@ -52,7 +52,7 @@ const Navigation = () => {
   return (
     <NavBar>
       <LeftNav>
-        <NavLink to="/" active={location.pathname === "/"}>
+        <NavLink to="/uidesign-btown" active={location.pathname === "/uidesign-btown"}>
           HOME
         </NavLink>
       </LeftNav>

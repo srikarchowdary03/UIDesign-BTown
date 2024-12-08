@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/uidesign-btown" element={<Home />} />
         <Route path="/transport" element={<Transport />} />
         <Route path="/events" element={<Events />} />
         <Route path="/subway" element={<Subway />} />
