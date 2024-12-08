@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/uidesign-btown/static/css/main.e6c13ad2.css",
+    "main.js": "/uidesign-btown/static/js/main.9248a5b6.js",
+    "static/media/commuterMap.jpg": "/uidesign-btown/static/media/commuterMap.fda8614420e78cf18ff2.jpg",
+    "static/media/subwayMap.jpg": "/uidesign-btown/static/media/subwayMap.ecbc3c902278c4e6e4ab.jpg",
+    "static/media/red.webp": "/uidesign-btown/static/media/red.4f3e283ff03ecaaa6d3b.webp",
+    "static/media/ferryMap.jpg": "/uidesign-btown/static/media/ferryMap.d64bf0ae0872d6b2ecfc.jpg",
+    "static/media/greenLine.png": "/uidesign-btown/static/media/greenLine.b6b70046181a7582165a.png",
+    "static/media/transportImage.jpg": "/uidesign-btown/static/media/transportImage.601973b4b0b53df45b64.jpg",
+    "static/media/bus.jpg": "/uidesign-btown/static/media/bus.464f0f12990157dac984.jpg",
+    "static/media/orange.jpg": "/uidesign-btown/static/media/orange.b49d52402cb9ff52163b.jpg",
+    "static/media/green.jpg": "/uidesign-btown/static/media/green.b0ec105856eec5c77e8d.jpg",
+    "static/media/events.jpg": "/uidesign-btown/static/media/events.996d3d8057df2ca5cb98.jpg",
+    "static/media/redTrain.jpg": "/uidesign-btown/static/media/redTrain.d97ac3423875a1025b7b.jpg",
+    "static/media/city.jpg": "/uidesign-btown/static/media/city.615c73da55e1bbf47d01.jpg",
+    "static/media/silver.jpg": "/uidesign-btown/static/media/silver.daa1358dee362a80075b.jpg",
+    "static/media/redLine.jpg": "/uidesign-btown/static/media/redLine.3d0f6511e2bf8898dbaf.jpg",
+    "static/media/ashRed.jpg": "/uidesign-btown/static/media/ashRed.10d54df695b7d0050c2f.jpg",
+    "static/media/blue.jpg": "/uidesign-btown/static/media/blue.03c946c52686c8ff1f57.jpg",
+    "static/media/BostonSub.jpg": "/uidesign-btown/static/media/BostonSub.e07cf68cba46157d8f65.jpg",
+    "static/media/silverLine.webp": "/uidesign-btown/static/media/silverLine.cd5f4f4d731d08830eb8.webp",
+    "static/media/aca.webp": "/uidesign-btown/static/media/aca.e745c965498677b67699.webp",
+    "static/media/BlueLine.jpg": "/uidesign-btown/static/media/BlueLine.f90f5d495e56b978479f.jpg",
+    "static/media/orangeLine.jpg": "/uidesign-btown/static/media/orangeLine.1ca38607abcfa9141432.jpg",
+    "static/media/ride.webp": "/uidesign-btown/static/media/ride.43ce8dbe80775e95628f.webp",
+    "index.html": "/uidesign-btown/index.html",
+    "main.e6c13ad2.css.map": "/uidesign-btown/static/css/main.e6c13ad2.css.map",
+    "main.9248a5b6.js.map": "/uidesign-btown/static/js/main.9248a5b6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.9248a5b6.js"
+  ]
+}
