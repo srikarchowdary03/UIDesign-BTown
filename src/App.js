@@ -10,10 +10,10 @@ import Academics from "./Academics";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/uidesign-btown">
       <Navigation />
       <Routes>
-        <Route path="/uidesign-btown" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/transport" element={<Transport />} />
         <Route path="/events" element={<Events />} />
         <Route path="/subway" element={<Subway />} />

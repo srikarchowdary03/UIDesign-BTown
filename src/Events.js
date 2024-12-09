@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback, useMemo } from "react";
 import styled from "styled-components";
-import { useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import events from "./images/events.jpg";
 
 const EventsWrapper = styled.div`
@@ -24,6 +24,7 @@ const HeroHeading = styled.h1`
   margin: 0;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
+  padding: 10px;
 `;
 
 const HeroSubheading = styled.p`
@@ -31,6 +32,7 @@ const HeroSubheading = styled.p`
   margin-top: 10px;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
+  padding: 5px;
 `;
 
 const FilterSection = styled.div`
@@ -151,7 +153,8 @@ const Events = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [classification, setClassification] = useState("");
-  const location = useLocation(); // Access query parameters from the URL
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const categories = useMemo(
     () => ["Music", "Sports", "Festivals", "Arts & Theater", "Comedy", "Family", "Charity", "Holiday"],
@@ -174,7 +177,7 @@ const Events = () => {
           id: event.id,
           name: event.name,
           date: event.dates.start.localDate,
-          time: event.dates.start.localTime,
+          time: event.dates.start.localTime || "N/A",
           location: event._embedded.venues[0]?.name || "N/A",
           link: event.url,
           category:
@@ -195,9 +198,9 @@ const Events = () => {
       for (const category of categories) {
         const events = await fetchEventsForCategory(category);
         allEvents.push(...events);
-        if (allEvents.length >= 30) break; // Limit to 30 events
+        if (allEvents.length >= 30) break;
       }
-      setEvents(allEvents.slice(0, 30)); // Ensure only 30 events are displayed
+      setEvents(allEvents.slice(0, 30)); 
     } catch (error) {
       console.error("Error fetching all events:", error);
     } finally {
@@ -223,6 +226,11 @@ const Events = () => {
     fetchEventsForQuery();
   }, [fetchEventsForQuery]);
 
+  const handleCategoryClick = (category) => {
+    const query = category === "All" ? "" : `?category=${category}`;
+    navigate(`/events${query}`);
+  };
+
   return (
     <EventsWrapper>
       <HeroSection>
@@ -235,9 +243,7 @@ const Events = () => {
           <CategoryButton
             key={category}
             active={classification === category || (!classification && category === "All")}
-            onClick={() =>
-              (window.location.href = category === "All" ? "/events" : `/events?category=${category}`)
-            }
+            onClick={() => handleCategoryClick(category)}
           >
             {category}
           </CategoryButton>
@@ -262,7 +268,7 @@ const Events = () => {
                   <strong>Date:</strong> {event.date}
                 </EventInfo>
                 <EventInfo>
-                  <strong>Time:</strong> {event.time || "N/A"}
+                  <strong>Time:</strong> {event.time}
                 </EventInfo>
                 <EventInfo>
                   <strong>Location:</strong> {event.location}

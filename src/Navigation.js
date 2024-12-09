@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
-import SearchBar from "./SearchBar"; // Import the SearchBar component
+import SearchBar from "./SearchBar";
 
 const NavBar = styled.nav`
   display: flex;
@@ -43,16 +43,16 @@ const NavLink = styled(Link)`
 `;
 
 const SearchContainer = styled.div`
-  max-width: 250px; /* Limit search bar width */
+  max-width: 250px;
 `;
 
 const Navigation = () => {
-  const location = useLocation(); // Get the current location
+  const location = useLocation();
 
   return (
     <NavBar>
       <LeftNav>
-        <NavLink to="/uidesign-btown" active={location.pathname === "/uidesign-btown"}>
+        <NavLink to="/" active={location.pathname === "/"}>
           HOME
         </NavLink>
       </LeftNav>
@@ -70,9 +70,8 @@ const Navigation = () => {
           Academics
         </NavLink>
 
-        {/* Add the Search Bar */}
         <SearchContainer>
-          <SearchBar size="small" /> {/* Small Search Bar for Navigation */}
+          <SearchBar size="small" />
         </SearchContainer>
       </RightNav>
     </NavBar>
